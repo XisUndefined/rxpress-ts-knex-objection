@@ -39,7 +39,7 @@ app.get(
 );
 
 app.post(
-  "/article",
+  "/articles",
   async (req: Request<{}, {}, Partial<Articles>>, res: Response) => {
     const newArticle = req.body;
     const article = await ArticlesModel.query().insert(newArticle);
